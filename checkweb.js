@@ -115,7 +115,7 @@ var loadServices = function() {
           rule.hour = new schedule.Range(0, 23, ws[i].freq.hour);
         }
 
-        console.log(rule)
+        //console.log(rule)
         //rules.push(rule);
         //rule.minute = ws.freq.minute;
         //rule.hour = ws.freq.hour;
@@ -131,6 +131,8 @@ var loadServices = function() {
       }
     }
   }
+  alertMail('checkweb is running','just started...')
+
 }
 
 // alertMail
