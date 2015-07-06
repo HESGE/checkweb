@@ -1,0 +1,8 @@
+[
+{ "_comment" : "use _ to comment a specific service"},
+{ "_service" : "solr-geotweet.json"},
+{ "_service" : "solr-geotweet-location.json"},
+{ "_service" : "solr-geotweet-keyword.json"},
+{ "_service" : "solr-medline.json"},
+{ "service" : "web-bitem.json"}
+]

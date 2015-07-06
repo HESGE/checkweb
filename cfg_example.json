@@ -1,0 +1,10 @@
+{
+"service_dir" : "./services/",
+
+"mail_alert"      : true,
+"mail_service"    : "gmail",
+"mail_auth_user"  : "name@gmail.com",
+"mail_auth_path"  : "********",
+"mail_from"       : "checkweb",
+"mail_to"         : "name@gmail.com"
+}
