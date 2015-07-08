@@ -1,0 +1,17 @@
+{
+  "name"        : "checkweb",
+  "description" : "A simple tool to check web services",
+  "author"      : "Arnaud Gaudinat",
+  "dependencies": {
+    "bunyan"        : "1.4.x",
+    "node-schedule" : "0.2.x",
+    "nodemailer"    : "1.4.x",
+    "request"       : "2.58.x"
+
+  },
+  "devDependencies": {
+    "mocha"       : "2.2.x",
+    "supertest"   : "0.13.x"
+  },
+  "engine": "node >= 0.10.x"
+}
