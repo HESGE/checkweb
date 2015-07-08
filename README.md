@@ -32,17 +32,16 @@ if there is an issue the checkweb send an email alert
 * npm install forever
 * forever start checkweb.js
 * to stop
-** forever stop checkweb.js
+ * forever stop checkweb.js
 
 # configuration
 
-## configure checkweb
+#configure checkweb
 
 * edit cfg.json
 * configure the services directory and the email alert address
 * supported mail system is given by 'nodemailer' node module (here is the supported service https://github.com/andris9/nodemailer-wellknown#supported-services), but only gmail was tested
-
-** for gmail, it is possible you have to decrease the security level of your mail account (so don't use a personnal account) and to authorize specifically the application by using this url:  https://g.co/allowaccess
+ * for gmail, it is possible you have to decrease the security level of your mail account (so don't use a personnal account) and to authorize specifically the application by using this url:  https://g.co/allowaccess
 
 
 ## configure services
