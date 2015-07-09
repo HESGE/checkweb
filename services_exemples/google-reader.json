@@ -1,0 +1,9 @@
+{
+"url"       : "https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=Official%20Google%20Blogs%27",
+"name"      : "google search tool for the feed",
+"comment"   : "check that there are some tweets the last few minutes",
+"checks"    : [
+  { "type" : "json", "keys" : ["response","numFound"], "operator" : ">", "value" : 0 }
+],
+"freq"  : { "second": 10}
+}

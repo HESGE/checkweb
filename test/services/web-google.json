@@ -1,0 +1,6 @@
+{
+"url"     : "http://www.google.com/",
+"name"    : "Google web site",
+"comment" : "check if the google web site is still alive",
+"freq"    : { "hour": 1}
+}

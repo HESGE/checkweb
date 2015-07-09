@@ -1,8 +1,0 @@
-[
-{ "_comment" : "use _ to comment a specific service"},
-{ "service" : "solr-geotweet.json"},
-{ "service" : "solr-geotweet-location.json"},
-{ "service" : "solr-geotweet-keyword.json"},
-{ "service" : "solr-medline.json"},
-{ "service" : "web-bitem.json"}
-]

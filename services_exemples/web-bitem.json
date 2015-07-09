@@ -1,0 +1,6 @@
+{
+"url"     : "http://bitem.hesge.ch/",
+"name"    : "BITEM web site",
+"comment" : "check that bitem is alive",
+"freq"    : { "hour": 1}
+}
