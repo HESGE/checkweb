@@ -1,6 +1,8 @@
 {
 "service_dir" : "./cfg/services/",
 
+"scheduler"       : true,
+
 "mail_alert"      : false,
 "mail_service"    : "gmail",
 "mail_auth_user"  : "name@gmail.com",
