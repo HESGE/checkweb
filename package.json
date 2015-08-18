@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "mocha"       : "2.2.x",
-    "supertest"   : "0.13.x"
+    "supertest"   : "0.13.x",
+    "assert"      : "1.3.x"
   },
   "engine": "node >= 0.10.x"
 }

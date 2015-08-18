@@ -1,3 +1,3 @@
-services/*
+cfg/cfg.json
+cfg/services
 node_modules/
-cfg.json

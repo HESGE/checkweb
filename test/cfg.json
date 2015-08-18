@@ -1,0 +1,10 @@
+{
+"service_dir" : "./services/",
+
+"mail_alert"      : false,
+"mail_service"    : "gmail",
+"mail_auth_user"  : "user",
+"mail_auth_path"  : "password",
+"mail_from"       : "from@gmail.com",
+"mail_to"         : "to@gmail.com"
+}

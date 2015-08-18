@@ -1,5 +1,5 @@
 {
-"service_dir" : "./services/",
+"service_dir" : "./cfg/services/",
 
 "mail_alert"      : false,
 "mail_service"    : "gmail",

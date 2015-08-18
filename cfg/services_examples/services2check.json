@@ -1,5 +1,6 @@
 [
 { "_comment" : "use _ to comment a specific service"},
 { "_service" : "google-reader.json"},
-{ "service" : "web-bitem.json"}
+{ "service" : "web-google.json"},
+{ "_service" : "web-bitem.json"}
 ]
