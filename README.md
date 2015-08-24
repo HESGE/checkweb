@@ -55,17 +55,19 @@
 >cp cfg/cfg_example.json cfg/cfg.json
 ```
 
-* And copy the ```services_example``` directory to
+* And mv the ```services_example``` directory to
 ```services_example```
 
 ```
->cp cfg_example.json cfg.json
+>mv cfg/services_example cfg/service
+
 ```
 
 * And run:
 
 ```
 >node checkweb.js
+
 ```
 
 * you should see bunyan output log (the log system used)
