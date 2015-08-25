@@ -4,12 +4,12 @@
 
 * Checkweb is a simple tool written with node.js to check several web services regularly (but without UI)
 * All web services to check are declared in a JSON format located in the cfg/services directory
-* If there is an issue the checkweb system could send an email alert (depending on the configuration)
+* If there is an issue, the checkweb system could send an email alert (depending on the configuration)
 * It contains an integrated scheduler
 
 ## What is not
 
-* a system monitoring tool (disk, memory, network)
+* a monitoring tool for a system(disk, memory, network)
 
 ## Able to check
 
@@ -21,6 +21,7 @@
 
 * Tests (sorry)
 * Continuous Test Integration
+* Validate JSON content of the configuration
 
 # Installation
 
@@ -46,17 +47,15 @@
 >npm install
 ```
 
-
 # Test the examples
 
-* In ```cfg``` Directory, copy the ```cfg_example.json``` to ```cfg.json``` (mail alert is disabled by default)
+* In `cfg` Directory, copy the `cfg_example.json` to `cfg.json` (mail alert is disabled by default)
 
 ```
 >cp cfg/cfg_example.json cfg/cfg.json
 ```
 
-* And mv the ```services_example``` directory to
-```services_example```
+* And mv the `services_example` directory to `services_example`
 
 ```
 >mv cfg/services_example cfg/service
@@ -78,20 +77,23 @@
 npm install forever
 forever start checkweb.js
 ```
+
 to stop
 
-```forever stop checkweb.js ```
+```
+forever stop checkweb.js
+```
 
 # Configuration
 
 ## Main configuration
 
-* Edit ```cfg.json```
-* Configure the ```cfg/services``` directory and the email alert address
-* supported mail system is given by ```nodemailer``` node module (here is the supported service https://github.com/andris9/nodemailer-wellknown#supported-services), but only gmail was tested
+* Edit `cfg.json`
+* Configure the `cfg/services` directory and the email alert address
+* supported mail system is given by `nodemailer` node module (here is the supported service https://github.com/andris9/nodemailer-wellknown#supported-services), but only gmail was tested
  * for gmail, it is possible you have to decrease the security level of your mail account (so don't use a personal account) and to authorize specifically the application by using this url:  https://g.co/allowaccess
 
-### Example of ```cfg.json```
+### Example of `cfg.json`
 
 ```json
 {
@@ -112,21 +114,21 @@ to stop
 }
 ```
 
-* ```services_dir```, is the directory where the services are stored
-* ```scheduler```, activates scheduler if ```true```, else do it only once
-* ```mail_alert```, activates mail alert, if well configurated
-   * ```alert_only_once```, activates alert only once during a period of time (to avoid to have to much alert during a day)
-      * ```alert_reset```, reset the alert system each period of time
+* `services_dir`, is the directory where the services are stored
+* `scheduler`, activates scheduler if `true`, else do it only once
+* `mail_alert`, activates mail alert, if well configurated
+   * `alert_only_once`, activates alert only once during a period of time (to avoid to have to much alert during a day)
+      * `alert_reset`, reset the alert system each period of time
 
-   * ```mail_service```, name of the mail service
-   * ```mail_auth_user```, email account
-   * ```mail_auth_path```, email password
-   * ```mail_from```, name of the mail from
-   * ```mail_to```, email account where to send the email
+   * `mail_service`, name of the mail service
+   * `mail_auth_user`, email account
+   * `mail_auth_path`, email password
+   * `mail_from`, name of the mail from
+   * `mail_to`, email account where to send the email
 
 ## Services configuration
 
-* Go in ```cfg/services``` directories and create or modify the service JSON files such as ```cfg/services/google-reader.json```
+* Go in `cfg/services` directories and create or modify the service JSON files such as `cfg/services/google-reader.json`
 
 ### Example of service
 
@@ -143,23 +145,23 @@ to stop
 ```
 
 Where:
-* ```url```, is the full url of the web service to check (with params)
-* ```name```, is the name of the servie for display purpose
-* ```comment```, is the description of what is checked
-* ```checks```, is a TABLE wich contain several item to check, depending of the service output:
-   * ```type```, is the type of the object to check, could be curently:
+* `url`, is the full url of the web service to check (with params)
+* `name`, is the name of the servie for display purpose
+* `comment`, is the description of what is checked
+* `checks`, is a TABLE wich contain several item to check, depending of the service output:
+   * `type`, is the type of the object to check, could be curently:
       * json
       * regex
-   * ```keys```, is the json item to check, here is ```response.numFound```
-   * ```operator```, is the operator to apply between ```keys``` and ```value```, could be all the javascript operator:
+   * `keys`, is the json item to check, here is `response.numFound`
+   * `operator`, is the operator to apply between `keys` and `value`, could be all the javascript operator:
       * '>'
       * '<'
       * '==='
       * '!=='
       * '>='
       * '<='
-   * ```value```, is the value to check
-* ```freq```, is the schedular period between to check, in 'hour', 'minute' or 'second'
+   * `value`, is the value to check
+* `freq`, is the schedular period between to check, in 'hour', 'minute' or 'second'
 
 ### Example with regex
 
@@ -177,7 +179,7 @@ Where:
 
 ## Configure what services to run
 
-* Edit the ```cfg/services/services2check.json```, add lines or comments with underscore to disable the check
+* Edit the `cfg/services/services2check.json`, add lines or comments with underscore to disable the check
 
 ## Example:
 
@@ -189,4 +191,4 @@ Where:
 { "_service" : "web-bitem.json"}
 ]
 ```
-Here only ```web-google.json``` service is checked. Others are commented thanks to ```_```
+Here only `web-google.json` service is checked. Others are commented thanks to `_`

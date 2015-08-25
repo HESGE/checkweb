@@ -2,6 +2,8 @@
 "service_dir" : "./cfg/services/",
 
 "scheduler"       : true,
+"alert_only_once" : true,
+"alert_reset"     : { "hour":4, "minute": 0},
 
 "mail_alert"      : false,
 "mail_service"    : "gmail",
